@@ -1,10 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
+using NUnit.Framework.Internal;
 using OpenQA.Selenium;
 using TestProject.page_objects;
 using TestProject.utils;
 using static TestProject.utils.GetInstance;
 using Assert = NUnit.Framework.Assert;
+using TestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 
 namespace TestProject
 {

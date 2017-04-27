@@ -4,31 +4,43 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
+using WebDriverManager.Helpers;
 
 namespace TestProject.utils
 {
     public class GetInstance
     {
-        private static IWebDriver driver;
+        private static IWebDriver _driver;
         
         public static IWebDriver Driver()
         {
-            if (driver == null)
+            if (_driver == null)
             {
-                new DriverManager().SetUpDriver(new ChromeConfig());
+                //new ChromeConfig();
+                //new EdgeConfig();
+                //new FirefoxConfig();
+                //new InternetExplorerConfig();
+                //new OperaConfig();
+                //new PhantomConfig();
 
-                driver = new ChromeDriver();
+                //new DriverManager().SetUpDriver(new ChromeConfig(), "2.25");
+                //new DriverManager().SetUpDriver(new ChromeConfig(), "Latest", Architecture.X32);
+                //new DriverManager().SetUpDriver(new ChromeConfig(), "2.25", Architecture.X64);
+
+                new DriverManager().SetUpDriver(new FirefoxConfig());
+
+                _driver = new FirefoxDriver();
             }
 
-            return driver;
+            return _driver;
         }
 
         public static void DriverClose()
         {
-            if (driver != null)
+            if (_driver != null)
             {
-                driver.Close();
-                driver.Quit();
+                _driver.Close();
+                _driver.Quit();
             }
 
         }
