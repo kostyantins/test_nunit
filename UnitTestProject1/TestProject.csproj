@@ -37,6 +37,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -60,6 +64,10 @@
     </Reference>
     <Reference Include="WebDriver.Support, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.Support.3.3.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriverManager, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebDriverManager.2.1.0\lib\net45\WebDriverManager.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -86,7 +94,9 @@
     <Compile Include="tests\TextEqualsExelRiderTest.cs" />
     <Compile Include="utils\DataProvider.cs" />
     <Compile Include="utils\ExelReader.cs" />
+    <Compile Include="utils\Extensions\EnumExtensions.cs" />
     <Compile Include="utils\GetInstance.cs" />
+    <Compile Include="utils\Extensions\StringExtensions.cs" />
     <Compile Include="utils\TestRunner.cs" />
   </ItemGroup>
   <ItemGroup>
